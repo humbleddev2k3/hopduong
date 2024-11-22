@@ -94,32 +94,6 @@ header h1 a {
     position: relative;
 }
 
-.svg1{
-    bottom: 0;
-    height: 130%;
-    left: 200px;
-    position: absolute;
-    right: 0;
-    width: 10%;
-    z-index: 0;
-}
-.svg2{
-    bottom: 0;
-    height: 20%;
-    right: 200px;
-    position: absolute;
-    right: 0;
-    width: 10%;
-    z-index: 0;
-}
-.svg3{
-    height: 100%;
-    left: 200px;
-    position: absolute;
-    right: 0;
-    width: 40px;
-    z-index: 0;
-}
 .round-image {
     width: 200px;
     border-radius: 100px; /* Bo góc 20px */
@@ -139,6 +113,13 @@ header h1 a {
     margin-top: 200px;
     gap:25px;
     margin-left: 60px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.say-hello:hover{
+        transform: translateY(-10px);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
 }
 .text-white{
     color: #fff;
@@ -152,6 +133,10 @@ header h1 a {
     text-transform: uppercase;
     text-align: center;
     margin-left: 160px;
+}
+.say-hello__work{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
 }
 /*----Mobile----*/
 .nav__bars-btn{
@@ -237,19 +222,46 @@ header h1 a {
 .items__github{
     width: 36px;
     height: 36px;
+    border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
 }
-.items__github:hover{
-    color: red;
-}
+
 .items__fb{
     width: 36px;
     height: 36px;
+    border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .items__instagram{
     width: 36px;
     height: 36px;
+    border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
+.skills__profile{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:12px;
+    margin-bottom: 12px;
+}
+.skills__profile-items{
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.skills__profile-items:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+.skill{
+    margin-top: 200px;
+}
 /* Responsive Adjustments */
 @media (max-width: 1024px) {
     .box-profile {
@@ -311,4 +323,37 @@ header h1 a {
         font-size: 14px;
         
     }
+    .skill{
+        margin-top: 30px;
+    }
+    .skills__profile-items:hover{
+        transform: translateY(-10px);
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    }
+}
+@keyframes rainbow {
+    0% { color: rgb(100, 0, 0); }
+    20% { color: rgb(49, 33, 2); }
+    40% { color: rgb(55, 55, 1); }
+    60% { color: rgb(15, 72, 15); }
+    80% { color: rgb(14, 14, 136); }
+    100% { color: rgb(140, 6, 140); }
+  }
+.text-animate{
+    font-size: 38px;
+    font-weight: bold;
+    animation: rainbow 5s infinite;
+    margin-bottom: 10px;
+  }
+.items__github:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+.items__fb:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+.items__instagram:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
 }
